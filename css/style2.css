@@ -1,0 +1,73 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #186A3B;
+}
+
+.eng{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.kh-title{
+	font-family: 'Preahvihear', cursive;
+}
+
+.kh{
+	font-family: 'Content', cursive;
+}
+
+.card{
+	width: 300px;
+	height: 400px;
+	background-color: #fff;
+	transform-style: preserve-3d; 
+	transform: perspective(2000px);
+	transition: all 0.5s linear;
+	position: relative;
+	box-shadow: inset 300px 0 50px rgba(0,0,0,0.5); 
+}
+
+.card:hover{
+	transform: perspective(2000px) rotate(-10deg);
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5);
+}
+
+.card .image{
+	width: 100%;
+	height: 100%;
+	transform-origin: left;
+	transition: all 0.5s linear;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	cursor: pointer;
+	border: 1px solid #333;
+}
+
+.card:hover .image{
+	transform: rotateY(-140deg);
+}
+
+.card .image > img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card .content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px 40px;
+	text-align: center;
+}
+
+.card .content .paragraph{
+	margin-bottom: -10px;
+}
